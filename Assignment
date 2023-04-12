@@ -49,15 +49,15 @@ public:
 float evaluatePostfix(string exp) 
 {
     Stack stack;
-    for (int i = 0; i < exp.length(); i++) 
+    for (int i = 0; i < exp.length(); i++) //infix switch
     {
         if (isdigit(exp[i])) 
         {
-            stack.push(exp[i] - '0');
+            stack.push(exp[i] - '0'); // num - 48 in ASCII Table
         }
         else 
         {
-            int num2 = stack.pop();
+            int num2 = stack.pop(); //division,Subtract
             int num1 = stack.pop();
             switch (exp[i]) 
                 {
